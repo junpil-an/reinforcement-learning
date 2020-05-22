@@ -14,7 +14,7 @@ optimal
 fly stunt manoeuvres in a 
 !(사진)[./img/]
 
-##3.Reward
+##3. Reward
 
 reward 는 scalar feedback signal  숫자 하나
 
