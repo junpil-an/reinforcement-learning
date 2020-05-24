@@ -93,7 +93,7 @@ agent - 내가 다음 action을 하는데 필요한 정보들
   - E = 기대값
  
  - action value function
-  -q_π(s,a) = E_π{G_t|S_t= s, A_t =a} 
+  - q_π(s,a) = E_π{G_t|S_t= s, A_t =a} 
  
  ## markov definition process 
  
@@ -173,7 +173,7 @@ agent - 내가 다음 action을 하는데 필요한 정보들
  
 ## value Function
 
--상황이 얼마나 좋은지 알려줌(총 받을 미래 reward를 기대값
+- 상황이 얼마나 좋은지 알려줌(총 받을 미래 reward를 기대값
 - 현재 state가 좋은지 안좋은지 판단
 확률이 ev자체도 확률성이 있을수 있다 그래서 꼭 기대값을 넣어주어야 한다
 
