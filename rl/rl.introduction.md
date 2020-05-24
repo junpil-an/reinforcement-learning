@@ -1,6 +1,6 @@
 ## 강화학습
 
-##1. 특징
+## 1. 특징
 - 다른 학습 방법과는 다르게 superviser가 없다
 - reward 를 mixmization 하는 방법
 -optimal
@@ -74,13 +74,14 @@ agent가 필요한 정보들
  
  ## Policy
  -policy value function
-  - π(a|s) = P{At=a|St=s}
+  - π(a|s) = P{A_t=a|S_t=s}
   - 상태 s에서 액션 a를 선택할 확률
   - 상태가 s일때 a를 선택할 확률
  
  -state value function
   -ν_π(s) = E_π{G_t|S_t=s}
   - 상태 s부터 π를 따라서 움직일 때 리턴의 기대값
+  - E = 기대값
  
  - action value function
   -q_π(s,a) = E_π{G_t|S_t= s, A_t =a} 
@@ -137,9 +138,30 @@ agent가 필요한 정보들
  - Ra_s = E[R_t+1|S_t=s , A_t =a]
 
 ## bellman function
--
+- 가치 함수는 두 파트로 나눠 생각할 수 있다
+ - 즉각적인 보상 R_t+1
+ - 다음 상태의 가치 γ*ν_π(s_t+1)
 
+ - MDP를 풀때 사용하는 방정식
+ <br>
+ - state value function
+  - v(s) 
+   - = E{G_t|S_t =s}
+   - = E{R_t+1+γ*v(s_t+1)|s_t = s}
+   - = E(기대값)이 있어야 된다
 
+- action value function
+ - q_π(s,a) = E_π{R_t+1 +γ*q_π(s_t+1,A_t+1) |S_t= s, A_t =a}
+ 
+##bellman 최적 function
+
+- 최적의 가치 함수
+ - q_* (s,a) = max*q_π(s,a) 
+ - 너가 할 수 있는 정책중에 최적의 value 값
+ - q_* 를 알게 된 순간 우리는 optimal 하게 행동 할 수 있다
+ 
+ - q_* (s,a) = E_s{r + γmaxq_*(s,a) }
+ 
 ## value Function
 
 -상황이 얼마나 좋은지 알려줌
