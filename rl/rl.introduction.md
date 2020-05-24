@@ -1,12 +1,17 @@
 ## 강화학습
 
 ##1. 특징
-superviser가 없다
+- 다른 학습 방법과는 다르게 superviser가 없다
+- reward 를 mixmization 하는 방법
+-optimal
+- 피드백(reward)이 늦어질 수 있다. 즉각적인 보상을 얻기가 힘들 수 있다.
 
-reward 를 mixmization 하는 방법
+- 스칼라 : 방향의 구별이 없고 하나의 수치로 정해지는 양
+ - 온도, 길이 ,속력
 
-optimal
-2.피드백이 늦어질 수 있다.
+- 벡터 : 수치값과 방향성이 있어야 완전하게 표시할 수 있는 양
+ - 속도, 힘, 변위
+
 3.시간이 중요하다 ( 순서가 있는 squencial data)
 4.agent's action 이 그 이후에 받게되는 data에 영향을 받음
 
@@ -59,6 +64,8 @@ agent가 필요한 정보들
  
  - MDP
  
+ 
+ 
  ## patially observable environments
  
  - POMDP
@@ -66,6 +73,50 @@ agent가 필요한 정보들
  - state 표현하는 방법은 여러개로 표현 할 수 있다
  
  ## Policy
+ -policy value function
+  - π(a|s) = P{At=a|St=s}
+  - 상태 s에서 액션 a를 선택할 확률
+  - 상태가 s일때 a를 선택할 확률
+ 
+ -state value function
+  -ν_π(s) = E_π{G_t|S_t=s}
+  - 상태 s부터 π를 따라서 움직일 때 리턴의 기대값
+ 
+ - action value function
+  -q_π(s,a) = E_π{G_t|S_t= s, A_t =a} 
+ 
+ ## markov process definition
+ 
+ - 상태의 집합 S
+  - 가능한 상태 들을 모두 모아놓은 집합
+  - MP=(S,P) 
+  
+  - 전이확률 정렬 P
+  P_ss' 상태 s에서 다음상태가 s'가 될 확률
+  
+ - P[S_t+1|S_t] = P[S_t+1|S_1,S_2....S_t]
+ 
+ ## MRP
+ 
+ - 상태의 집합 S
+ - 전이확률 정렬 P
+ - 보상 함수 R
+  - 어떤 상태 s에 도착했을 떄 받게 되는 보상을 의미
+  - R =E[R_t |S_t =s]
+  
+  - 감쇠인자 (discount factor)
+   - 0에서 1사이의 숫자
+   - 보상의 값에 곱하여 미래의 보상을 작게 만드는 역할
+   - G_t = R_t + γR_t+1 +γ**2*R_t+2+....
+   
+   - 감마가 필요한 이유
+    - 수학적 편리성( 수가 무한대로 증가할 수 있어서)
+    - 사람의 선호 반영
+    - 미래에 대한 불확실성 반영
+    - 실제 시스템이 그러한 경우가 있음 ex) 이자
+    
+ - MRP의 가치함수(value function)
+  - 상태 s로 부터 시작하여 에피소드가 끝날 때 까지 얻는 리턴(감쇠된 누적보상)의 기댓값
  
  - agent의 행동을 규정
  - state 를 넣어주면 action을 넣어주는 mapping 역할
@@ -74,6 +125,21 @@ agent가 필요한 정보들
  
  - Stochastic policy -  하나를 던져주면 여러 action이 가능한데 확률에 따라 픽해서 action 하나가 선택됨
     
+## MDP
+- MDP Ξ(S,A,P,R,γ)
+
+- 상태의 집합 S
+- 전이 확률 행렬 P
+ -Pa_ss' - a : 액션 a를 선택했을 때 상태 s에서 다음 상태가 s'이 될 확률
+
+- 액션의 집합 A
+- 보상함수 R
+ - Ra_s = E[R_t+1|S_t=s , A_t =a]
+
+## bellman function
+-
+
+
 ## value Function
 
 -상황이 얼마나 좋은지 알려줌
@@ -114,8 +180,12 @@ model - 환경이 어떻게 될지 예측하는 것
 - evironment 정보를 얻어 이해하는 과정 
 - 최선의 선택을 하는 과정
 
-- exploitation - go to your favourite restaurant
-- exploration - Try a new restaurant
+- exploitation 
+ - go to your favourite restaurant
+ - 아는 것을 바탕으로 최선을 다 하는 것
+- exploration 
+ - Try a new restaurant
+ - 정보를 더 얻고자 새로운 모험을 하는 것
 
 ##prediction and control
 
