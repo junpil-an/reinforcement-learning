@@ -12,6 +12,8 @@
 -  Q(s',a')을 이용하 Q(s,a)를 표현하는 방법은?
 - Q(s,a) = r + max_a' Q(s',a')  - 현재 받은 보상에  다음 s'에서 받을 a' reward의 최대값
 
+- Q(s,a) <- (1-α)Q(s,a) + α[r + Υmax_a Q(s',a')]
+- Q(s,a) <- Q(s,a) + α(r+ Υmax_a Q(s',a') - Q(s,a)]
 
 
 - Max Q = max_a' Q(s,a') : a'의 최대값
