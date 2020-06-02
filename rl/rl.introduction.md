@@ -8,7 +8,7 @@
 
 3.시간이 중요하다 ( 순서가 있는 squencial data)
 4.agent's action 이 그 이후에 받게되는 data에 영향을 받음
-
+ 
 ## 2.강화학습의 예시
 atari 게임 만들기
 
@@ -16,7 +16,7 @@ atari 게임 만들기
 
 reward 는 scalar(숫자 하나)
 
-agent 목적 - cumulate reward를 최대화 하는 것이 목적
+agent 목적 - cumulate reward를 최대화 하는 것이 목적 
 reward hypothsis 축적된 reward를 극대화하는 것을 목적으로 될 수 있다
 
 
@@ -57,7 +57,7 @@ agent - 내가 다음 action을 하는데 필요한 정보들
 ## Marcov state 
 
 - P[S_t+1|S_t] = P[S_t+1|S_1....S_t]
-- S_t가 S_t+1로 될 확률이 S_1+...S_t가 S_t+1될 확률이면 state는 marcov하다
+- `S_t`가 `S_t+1`로 될 확률이 `S_1+...S_t`가 `S_t+1`될 확률이면 state는 marcov하다
 - 오직 현재 state만 미래에 영향을 준다 
 
  ## fully observable environments
@@ -75,7 +75,7 @@ agent - 내가 다음 action을 하는데 필요한 정보들
  
  ## Policy
  
- - agent의 행동을 규정
+ - agent의 행동을 규정ㅋ
  - state를 넣어주면 action을 보냄
  - Deterministic policy :a= π(s)
   - S를 넣어주면 Action 하나를 결정적으로 정해줌
