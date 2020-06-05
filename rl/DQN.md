@@ -16,3 +16,14 @@
 
 -타겟 네트워크
 
+
+DQN(Deep Q - Networks)
+- Q-function 을 approximate 하는 dnn 
+
+- 그 전에 agent는 env를 MDP르 통해 이해를 하는데 학습을 하려면 필요한 모든 state에 대한 action-value function 값을 저장하고
+update 시켜나가야 하는데, 학습이 상당히 느려짐
+따라서 approximation을 하고 그 방법 중 하나가 dnn이다
+
+강화학습의 목표 - optimal policy를 구하는 것 , 
+각 state에서 optimal한 action value function을 알고 있으면 q값이 큰 action을 취하면 되는 것,
+
