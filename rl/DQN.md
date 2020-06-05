@@ -10,7 +10,12 @@
   - gradient descent(경사하강법)
 - 결국 뉴럴넷에 정답을 새겨 넣는 것, 마치 테이블과 비슷
 - TD 러닝
+
 - 벨만 최적 방정식
+ - action-value function 이 environment의 model을 몰라도 되므로 사용이 많이 됨
+ - 현재 state의 value function은 다음 state의 discounted value function에 어떤 행동을 해서 받는 reward를 합한 것
+ - expectation 이 붙은 것 , reward도 어떤 action을 취하는 지에 따라 다르고 도착하는 state 또한 달라짐
+
 
 -리플레이 버퍼
 
