@@ -45,3 +45,9 @@ DP 는 큰 문제 안에 작은 문제들이 중첩된 경우 , 전체 큰 문�
 - 현재 정책에 따라 평가
 
 - 핵심 주변 상태의 value fuction과 한 time step의 reward만 고려해서 현 state의 다음 value function을 계산 하겠다
+
+<br>
+
+- DP에서 agent는 evironment의 모든 정보를 알고 있음, 이 정보를 통해 최적 정책을 찾는  계산
+
+- policy evaluation은 여러 번에 걸쳐서 해야 정확한 value function을 얻을 수 있다
