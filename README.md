@@ -1,2 +1,1 @@
-# keras_study
-keras
+# reinforcement study
