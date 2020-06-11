@@ -56,13 +56,15 @@ S로부터 마침 상태 T까지 에피소드
 
 N(s) - 총 episode 동안 state s를 방문한 횟수
 
-G_i(s) - episode i 에서 state s 에 대한 return
+G_i(s) - episode i 에서 state s 에 대한 returna 
 
 ![사진](https://t1.daumcdn.net/cfile/tistory/99CB534B5A4A1D852F)
 
 1/n - step-size
 
 (G_n - V_n) - 오차
+
+- 이 업데이트 식을 통해 에피소드 동안 경험한 모든 상태에 대해 가치함수를 업데이트함
 
 #### First-visit MC or Every visit MC
 
