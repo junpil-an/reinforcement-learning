@@ -33,8 +33,8 @@ DP 는 큰 문제 안에 작은 문제들이 중첩된 경우 , 전체 큰 문�
 
 - policy는 모든 state에서 어떻게 action할 지에 대한 정보
 - 우리가 얻고자 하는 policy는 random이 아님, 현재 policy를 평가하고 발전시켜야 함
-  - policy evaluation
-  - policy imporvement
+  - policy evaluation - 벨만 기대 방정식을 통해 현재 정책에 대한 참 가치함수를 구하는것
+  - policy imporvement - 구한 가치함수를 통해 현재 정책에 업데이트하는 것
 
 <br>
 
