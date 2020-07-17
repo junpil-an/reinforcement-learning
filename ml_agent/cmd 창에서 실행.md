@@ -9,5 +9,6 @@
 
 - mlagent-learn --train --run-id="저장 이름" trainer_config.yaml --load
 
-#### 
- 
+#### 텐서보드 창 열고 훈련 정보 확인
+
+- tensorboard --logdir=results --port=6006
